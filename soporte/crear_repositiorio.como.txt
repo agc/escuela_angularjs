@@ -1,0 +1,6 @@
+git init
+git status
+git add -A
+git commit -m "N algunos ejemplos elementales, libro de Oreilly y AngularJs en accion"
+git remote add origin git@github.com:agc/escuela_angularjs.git
+git remote -v
