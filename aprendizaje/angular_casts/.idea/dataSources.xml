@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2244554753">
-    <data-source source="LOCAL" name="Rails angular_casts: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="7f8d000f-e94f-45e9-b52e-3dbd74923b4e">
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="Rails angular_casts: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="049c64c8-f279-4fb9-baa8-ae9bef8fc0d9">
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://</url>
-        </library>
-      </libraries>
-    </data-source>
-  </component>
+  <component name="DataSourceManagerImpl" compressed="false" hash="2244554753" />
 </project>
 
