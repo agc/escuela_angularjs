@@ -1,0 +1,1679 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red198\green33\blue13;\red190\green54\blue11;\red83\green83\blue83;
+\red55\green55\blue55;\red247\green247\blue247;\red213\green213\blue213;\red237\green30\blue13;\red245\green245\blue247;
+\red242\green242\blue242;\red38\green38\blue38;\red135\green135\blue135;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\deftab720
+\pard\pardeftab720
+
+\f0\fs50 \cf1 \cb2 \shad\shadx0\shady-20\shadr0\shado255 \shadc3 Rails Beginner Cheat Sheet\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\fs40 \cf1 \shad0 		{\field{\*\fldinst{HYPERLINK "http://pragtob.github.io/rails-beginner-cheatsheet/resources.html"}}{\fldrslt \shad\shadx0\shady-20\shadr0\shado255 \shadc3 Resources}}
+\f1\fs30 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0
+\f0\fs40 \cf1 		{\field{\*\fldinst{HYPERLINK "http://pragtob.github.io/rails-beginner-cheatsheet/about.html"}}{\fldrslt \shad\shadx0\shady-20\shadr0\shado255 \shadc3 About}}
+\f1\fs30 \cf4 \
+\pard\pardeftab720\sa200
+\cf4 \cb1 \
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf5 \kerning1\expnd-4\expndtw-20
+Console Basics\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 \kerning1\expnd0\expndtw0 The console (also called 
+\i command line, command prompt or terminal
+\i0 ) is just another way of interacting with your computer. So you can basically do anything with it that you could also do with your graphical desktop user interface. This sections contains a couple of examples.\
+For the different operating systems 
+\b starting the console
+\b0  differs.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0
+\b \cf4 {\listtext	\'95	}Windows:
+\b0  Open the start menu and search for command prompt. Alternatively choose 
+\i execute
+\i0  and enter 
+\i cmd
+\i0 .\
+\ls3\ilvl0
+\b {\listtext	\'95	}Mac:
+\b0  Open Spotlight, type 
+\i terminal
+\i0 , and start that program.\
+\ls3\ilvl0
+\b {\listtext	\'95	}Linux:
+\b0  The terminal should be one of the main options once you open the main menu of your distribution. Otherwise search for 
+\i terminal
+\i0  if your distribution has such an option or look under Accessories.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Change directory\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 cd directory
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 cd my_app
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 cd my_app/app/controllers
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Changes the directory to the specified directory on the console.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 List contents directory\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 ls directory
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 Windows: dir directory
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 ls
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 ls my_app
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Shows all contents (files and folders) of the directory. If no directory is specified shows the contents of the current directory.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Directory you are currently in\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 pwd
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 pwd
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Shows the full path of the directory you are currently in. E.g. /home/tobi/railsgirls \
+A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Create a new directory\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 mkdir name
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 mkdir rails
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 mkdir fun
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Creates a directory with the given name in the folder you are currently in.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Delete a file\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 rm file
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 Windows: del file
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 rm foo
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 rm index.html
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 rm pictures/old_picture.jpg
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 Deletes the specified file. Be 
+\b extra cautious
+\b0  with this as it would be too bad to delete something you still need :-(\
+You can simply specify the name of a file of the directory you are currently in. However you can also specify a path, this is shown in the third example. There we delete the 
+\i old_picture.jpg
+\i0  file from the 
+\i pictures
+\i0  folder.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Delete a directory\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 rm -r folder
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 Windows: rd folder
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 rm -r stuff_i_dont_need
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 rm -r stuff_i_dont_need/
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 rm -r old_application
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 Deletes the specified folder 
+\b and all of its contents
+\b0 . So please be 
+\b super cautious
+\b0  with this! Make sure that you do not need any of the contents of this folder any more.\
+So why would you want to delete a whole folder? Well maybe it was an old application that you do not need anymore :-)\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Starting a program\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 program arguments
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 firefox
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 firefox railsgirlsberlin.de
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 irb
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Starts the program with the given name and arbitrary arguments if the program takes arguments. Firefox is just one example. Starting Firefox without arguments just opens up Firefox. If you give it an argument it opens the specified URL. When you type in 
+\f2\fs26 \cf8 \cb9 irb
+\f1\fs30 \cf4 \cb1  this starts 
+\i interactive ruby
+\i0 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Abort the program\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Press 
+\b Ctrl + C
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 -\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 This will abort the program currently running in the terminal. For instance this is used to shut down the Rails server. You can also abort many other related tasks with it, including: bundle install, rake db:migrate, git pull and many more!\cell \lastrow\row
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf5 \kerning1\expnd-4\expndtw-20
+Ruby Basics\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 \kerning1\expnd0\expndtw0 Ruby is the programming language Ruby on Rails is written in. So most of the time you will be writing Ruby code. Therefore it is good to grasp the basics of Ruby. If you just want to play with Ruby, type 
+\b irb
+\b0  into your console to start interactive ruby. There you can easily experiment with Ruby. To leave irb, type 
+\b exit
+\b0 .\
+This is just a very small selection of concepts. This is especially true later on when we talk about what Arrays, Strings etc. can do. For more complete information have a look at {\field{\*\fldinst{HYPERLINK "http://ruby-doc.org/"}}{\fldrslt \cf8 ruby-doc}} or search with your favorite search engine!\
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 General concepts\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Comment\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 # Comment text
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 # This text is a comment
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 some.ruby_code # A comment
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 # some.ignored_ruby_code
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Ruby ignores everything that is marked as a comment. It does not try to execute it. Comments are just there for you as information. Comments are also commonly used to 
+\i comment out code
+\i0 . That is when you don't want some part of your code to execute but you don't want to delete it just yet, because you are trying different things out.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Variables\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 variable = some_value
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 name = "Tobi"\
+name # => "Tobi"\cf11 \
+\cf8 sum = 18 + 5\
+sum # => 23\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 With a variable you tell Ruby that from now on you want to refer to that value by the name you gave it. So for the first example, from now on when you use 
+\i name
+\i0  Ruby will know that you meant 
+\i "Tobi"
+\i0 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Console output\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 puts something
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 puts "Hello World"
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 puts [1, 5, "mooo"]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Prints its argument to the console. Can be used in Rails apps to print something in the console where the server is running.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Call a method\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 object.method(arguments)
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 string.length
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 array.delete_at(2)
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 string.gsub("ae", "\'e4")
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 Calling a method is also often referred to as 
+\i sending a message
+\i0  in Ruby. Basically we are sending an object some kind of message and are waiting for its response. This message may have no arguments or multiple arguments, depending on the message. So we kindly ask the object to do something or give us some information. When you "call a method" or "send a message" something happens. In the first example we ask a String how long it is (how many characters it consists of). In the last example we substitute all occurrences of "ae" in the string with the German "\'e4".\
+Different kinds of objects (Strings, Numbers, Arrays...) understand different messages.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Define a method\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 def name(parameter)\
+  # method body\
+end\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf8 def greet(name)\
+  puts "Hy there " + name\
+end\cf11 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f1\fs30 \cf4 \cb1 Methods are basically reusable units of behaviour. And you can define them yourself just like this. Methods are small and focused on implementing a specific behaviour.\
+Our example method is focused on greeting people. You could call it like this: 
+\f2\fs26 \cf8 \cb9 greet("Tobi")
+\f1\fs30 \cf4 \cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Equality\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 object == other
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 true == true # => true
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 3 == 4 # => false
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 "Hello" == "Hello" # => true
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 "Helo" == "Hello" # => false
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 With two equal signs you can check if two things are the same. If so, 
+\f2\fs26 \cf8 \cb9 true
+\f1\fs30 \cf4 \cb1  will be returned; otherwise, the result will be 
+\f2\fs26 \cf8 \cb9 false
+\f1\fs30 \cf4 \cb1 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Inequality\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 object != other
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 true != true # => false
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 3 != 4 # => true
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Inequality is the inverse to equality, e.g. it results in 
+\f2\fs26 \cf8 \cb9 true
+\f1\fs30 \cf4 \cb1  when two values are not the same and it results in 
+\f2\fs26 \cf8 \cb9 false
+\f1\fs30 \cf4 \cb1  when they are the same.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Decisions with if\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 if condition\
+  # happens when true\
+else\
+  # happens when false\
+end\cell 
+\pard\intbl\itap1\pardeftab720
+\cf8 if input == password\
+  grant_access\
+else\
+  deny_access\
+end\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f1\fs30 \cf4 \cb1 With if-clauses you can decide based upon a 
+\i condition
+\i0  what to do. When the condition is considered true, then the code after it is executed. If it is considered false, the code after the "else" is executed.\
+In the example, access is granted based upon the decision if a given input matches the password.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4620\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Constants\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 CONSTANT = some_value
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 PI = 3.1415926535\
+PI # => 3.1415926535\cf11 \
+\cf8 ADULT_AGE = 18\
+ADULT_AGE # => 18\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Constants look like variables, just in UPCASE. Both hold values and give you a name to refer to those values. However while the value a variable holds may change or might be of an unknown value (if you save user input in a variable) constants are different. They have a known value that should never change. Think of it a bit like mathematical or physical constants. These don't change, they always refer to the same value.\cell \lastrow\row
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 Numbers\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 Numbers are what you would expect them to be, normal numbers that you use to perform basic math operations.\
+More information about numbers can be found in the {\field{\*\fldinst{HYPERLINK "http://ruby-doc.org/core-2.0/Numeric.html"}}{\fldrslt \cf8 ruby-doc of Numeric}}.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1640\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth2880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth13700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1640\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth13700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 normal Number\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 number_of_your_choice
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 0
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 -11
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 42
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Numbers are natural for Ruby, you just have to enter them!\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1640\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth2880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth13700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Decimals\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 main.decimal
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 3.2
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 -5.0
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 You can achieve decimal numbers in Ruby simply by adding a point.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1640\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth13700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Basic Math\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 n operator m
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 2 + 3 # => 5
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 5 - 7 # => -2
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 8 * 7 # => 56
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 84 / 4 # => 21
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 In Ruby you can easily use basic math operations. In that sense you may use Ruby as a super-powered calculator.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1640\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth3900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth2880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth13700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Comparison\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 n operator m
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 12 > 3 # => true
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 12 < 3 # => false
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 7 >= 7 # => true
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 Numbers may be compared to determine if a number is bigger or smaller than another number. When you have the age of a person saved in the 
+\f2\fs26 \cf8 \cb9 age
+\f1\fs30 \cf4 \cb1  variable you can see if that person is considered an adult in Germany:\
+
+\f2\fs26 \cf8 \cb9 age >= 18 # true or false
+\f1\fs30 \cf4 \cb1 \cell \lastrow\row
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 Strings\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 Strings are used to hold textual information. They may contain single characters, words, sentences or a whole book. However you may just think of them as an ordered collection of characters.\
+You can find out more about Strings at the {\field{\*\fldinst{HYPERLINK "http://ruby-doc.org/core-2.0/String.html"}}{\fldrslt \cf8 ruby-doc page about Strings}}.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Create\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 'A string'
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 'Hello World'
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 'a'
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 'Just characters 129 _!$%^'
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 ''
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 A string is created by putting quotation marks around a character sequence. A {\field{\*\fldinst{HYPERLINK "https://github.com/bbatsov/ruby-style-guide/"}}{\fldrslt \cf8 Ruby style guide}} recommends using single quotes for simple strings.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Interpolation\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 "A string and an #\{expression\}"
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 "Email: #\{user.email\}"
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 "The total is #\{2 + 2\}"
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 "A simple string"
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 You can combine a string with a variable or Ruby expression using double quotation marks. This is called "interpolation." It is okay to use double quotation marks around a simple string, too.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Length\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 string.length
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 "Hello".length # => 5
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 "".length # => 0
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 You can send a string a message, asking it how long it is and it will respond with the number of characters it consists of. You could use this to check if the desired password of a user exceeds the required minimum length. Notice how we add a comment to show the expected result.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Concatenate\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 string + string2
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 "Hello " + "reader"\
+# => "Hello reader"\cf11 \
+\pard\intbl\itap1\pardeftab720\sa200
+\cf8 \cb9 "a" + "b" + "c" # => "abc"
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Concatenates two or more strings together and returns the result.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Substitute\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 string.gsub(a_string,\
+substitute)\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf8 "Hae".gsub("ae", "\'e4")\
+# => "H\'e4"\cf11 \
+\cf8 "Hae".gsub("b", "\'e4")\
+# => "Hae"\cf11 \
+\cf8 "Greenie".gsub("e", "u")\
+# => "Gruuniu"\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\i\fs30 \cf4 \cb1 gsub
+\i0  stands for "globally substitute". It substitutes all occurences of 
+\f2\fs26 \cf8 \cb9 a_string
+\f1\fs30 \cf4 \cb1  within the string with 
+\f2\fs26 \cf8 \cb9 substitute
+\f1\fs30 \cf4 \cb1 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth5080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth4460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Access\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 string[position]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 "Hello"[1] # => "e"
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Access the character at the given position in the string. Be aware that the first position is actually position 
+\i 0
+\i0 .\cell \lastrow\row
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 Arrays\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 An array is an ordered collection of items which is indexed by numbers. So an array contains multiple objects that are mostly related to each other. So what could you do? You could store a collection of the names of your favorite fruits and name it 
+\i fruits
+\i0 .\
+This is just a small selection of things an Array can do. For more information have a look at the {\field{\*\fldinst{HYPERLINK "http://ruby-doc.org/core-2.0/Array.html"}}{\fldrslt \cf8 ruby-doc for Array}}.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Create\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 [contents]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 []
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 ["Rails", "fun", 5]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Creates an Array, empty or with the specified contents.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Number of elements\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array.size
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 [].size # => 0
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 [1, 2, 3].size # => 3
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 ["foo", "bar"].size # => 2
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Returns the number of elements in an Array.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Access\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array[position]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 array = ["hi", "foo", "bar"]\
+array[0] # => "hi"\
+array[2] # => "bar"\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 As an Array is a collection of different elements, you often want to access a single element of the Array. Arrays are indexed by numbers so you can use a number to access an individual element. Be aware that the numbering actually starts with "0" so the first element actually is the 0th. And the last element of a three element array is element number 2.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Adding an element\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array << element
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 array = [1, 2, 3]\
+array << 4\
+array # => [1, 2, 3, 4]\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Adds the element to the end of the array, increasing the size of the array by one.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Assigning\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array[number] = value
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 array = ["hi", "foo", "bar"]\
+array[2] = "new"\
+array # => ["hi", "foo", "new"]\cf11 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Assigning new Array Values works a lot like accessing them; use an equals sign to set a new value. Voila! You changed an element of the array! Weehuuuuu!\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Delete at index\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array.delete_at(i)
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 array = [0, 14, 55, 79]\
+array.delete_at(2)\
+array # => [0, 14, 79]\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Deletes the element of the array at the specified index. Remember that indexing starts at 0. If you specify an index larger than the number of elements in the array, nothing will happen.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth4060\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5780\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth10960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Iterating\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 array.each do |e| .. end
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 persons.each do |p| puts p.name end
+\f1\fs30 \cf4 \cb1 \
+
+\f2\fs26 \cf8 \cb9 numbers.each do |n| n = n * 2 end
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 "Iterating" means doing something for 
+\i each
+\i0  element of the array. Code placed between 
+\i do
+\i0  and 
+\i end
+\i0  determines what is done to each element in the array.\
+The first example prints the name of every person in the array to the console. The second example simply doubles every number of a given array.\cell \lastrow\row
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 Hashes\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 Hashes associate a 
+\i key
+\i0  to some 
+\i value
+\i0 . You may then retrieve the value based upon its key. This construct is called a 
+\i dictionary
+\i0  in other languages, which is appropriate because you use the key to "look up" a value, as you would look up a definition for a word in a dictionary. Each key must be unique for a given hash but values can be repeated.\
+Hashes can map from anything to anything! You can map from Strings to Numbers, Strings to Strings, Numbers to Booleans... and you can mix all of those! Although it is common that at least all the keys are of the same class. 
+\i Symbols
+\i0  are especially common as keys. Symbols look like this: 
+\f2\fs26 \cf8 \cb9 :symbol
+\f1\fs30 \cf4 \cb1 . A symbol is a colon followed by some characters. You can think of them as special strings that stand for (symbolize) something! We often use symbols because Ruby runs faster when we use symbols instead of strings.\
+Learn more about hashes at {\field{\*\fldinst{HYPERLINK "http://www.ruby-doc.org/core-2.0/Hash.html"}}{\fldrslt \cf8 ruby-doc}}.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1400\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth2940\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5600\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12180\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1400\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth2940\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5600\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12180\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Creating\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 \{key => value\}
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 \{:hobby => "programming"\}
+\f1\fs30 \cf4 \cb1 \
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 \{42 => "answer", "score" => 100,\
+ :name => "Tobi"\}\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 You create a hash by surrounding the key-value pairs with curly braces. The arrow always goes from the 
+\i key
+\i0  to the 
+\i value
+\i0  depicting the meaning: 
+\i "This key points to this value."
+\i0 . Key-value pairs are then separated by commas.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1400\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth2940\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5600\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12180\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Accessing\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 hash[key]
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 hash = \{:key => "value"\}\
+hash[:key] # => "value"\
+hash[foo] # => nil\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Accessing an entry in a hash looks a lot like accessing it in an 
+\i array
+\i0 . However with a hash the key can be anything, not just numbers. If you try to access a key that does not exist, the value 
+\f2\fs26 \cf8 \cb9 nil
+\f1\fs30 \cf4 \cb1  is returned, which is Ruby's way of saying "nothing", because if it doesn't recognize the key it can't return a value for it.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1400\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth2940\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth5600\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12180\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Assigning\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 hash[key] = value
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 hash = \{:a => "b"\}\
+hash[:key] = "value"\
+hash # => \{:a=>"b", :key=>"value"\}\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 Assigning values to a hash is similar to assigning values to an array. With a hash, the key can be a number or it can be a symbol, string, number... or anything, really!\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1400\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat6 \clwWidth2940\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth5600\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat6 \clwWidth12180\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Deleting\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 hash.delete(key)
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb10 hash = \{:a => "b", :b => 10\}\
+hash.delete(:a)\
+hash # => \{:b=>10\}\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs30 \cf4 \cb1 You can delete a specified key from the hash, so that the key and its value can not be accessed.\cell \lastrow\row
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf5 \kerning1\expnd-4\expndtw-20
+Rails Basics\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 \kerning1\expnd0\expndtw0 This is an introduction to the basics of Rails. We look at the general structure of a Rails application and the important commands used in the terminal.\
+If you do not have Rails installed yet, there is a {\field{\*\fldinst{HYPERLINK "http://railsapps.github.io/installing-rails.html"}}{\fldrslt \cf8 well maintained guide by Daniel Kehoe }}on how to install Rails on different platforms.\
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 The Structure of a Rails app\
+\pard\pardeftab720
+
+\f1\b0\fs30 \cf4 Here is an overview of all the folders of a new Rails application, outlining the purpose of each folder, and describing the most important files.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Name\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 app\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 This folder contains your application. Therefore it is the 
+\b most important folder
+\b0  in Ruby on Rails and it is worth digging into its subfolders. See the following rows.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/assets\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Assets basically are your front-end stuff. This folder contains 
+\i images
+\i0  you use on your website, 
+\i javascripts
+\i0  for all your fancy front-end interaction and 
+\i stylesheets
+\i0  for all your CSS making your website absolutely beautiful.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/controllers\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 The controllers subdirectory contains the controllers, which handle the requests from the users. It is often responsible for a single resource type, such as places, users or attendees. Controllers also tie together the 
+\i models
+\i0  and the 
+\i views
+\i0 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/helpers\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Helpers are used to take care of logic that is needed in the views in order to keep the views clean of logic and reuse that logic in multiple views.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/mailers\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Functionality to send emails goes here.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/models\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 The models subdirectory holds the classes that model the business logic of our application. It is concerned with the things our application is about. Often this is data, that is also saved in the database. Examples here are a Person, or a Place class with all their typical behaviour.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 app/views\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 The views subdirectory contains the display templates that will be displayed to the user after a successful request. By default they are written in HTML with embedded ruby (.html.erb). The embedded ruby is used to insert data from the application. It is then converted to HTML and sent to the browser of the user. It has subdirectories for every resource of our application, e.g. places, persons. These subdirectories contain the associated view files.\
+Files starting with an underscore (
+\i _
+\i0 ) are called 
+\i partials
+\i0 . Those are parts of a view which are reused in other views. A common example is 
+\i _form.html.erb
+\i0  which contains the basic form for a given resource. It is used in the 
+\i new
+\i0  and in the 
+\i edit
+\i0  view since creating something and editing something looks pretty similar.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 config\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 This directory contains the configuration files that your application will need, including your database configuration (in 
+\i database.yml
+\i0 ) and the particularly important 
+\i routes.rb
+\i0  which decides how web requests are handled. The 
+\i routes.rb
+\i0  file matches a given URL with the 
+\i controller
+\i0  which will handle the request.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 db\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Contains a lot of 
+\i database
+\i0  related files. Most importantly the 
+\i migrations
+\i0  subdirectory, containing all your database migration files. Migrations set up your database structure, including the attributes of your models. With migrations you can add new attributes to existing models or create new models. So you could add the 
+\i favorite_color
+\i0  attribute to your Person model so everyone can specify their favorite color.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 doc\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Contains the documentation you create for your application. Not too important when starting out.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 lib\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Short for library. Contains code you've developed that is used in your application and may be used elsewhere. For example, this might be code used to get specific information from Facebook.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 log\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 See all the funny stuff that is written in the console where you started the Rails server? It is written to your 
+\i development.log
+\i0 . Logs contain runtime information of your application. If an error happens, it will be recorded here.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 public\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Contains static files that do not contain Ruby code, such as error pages.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 script\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 By default contains what is executed when you type in the 
+\i rails
+\i0  command. Seldom of importance to beginners.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 test\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Contains the tests for your application. With tests you make sure that your application actually does what you think it does. This directory might also be called 
+\i spec
+\i0 , if you are using the RSpec gem (an alternative testing framework).\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 vendor\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 A folder for software code provided by others ("libraries"). Most often, libraries are provided as 
+\i ruby gems
+\i0  and installed using the 
+\i Gemfile
+\i0 . If code is not available as a ruby gem then you should put it here. This might be the case for jQuery plugins. Probably won't be used that often in the beginning.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Gemfile\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 A file that specifies a list of gems that are required to run your application. Rails itself is a gem you will find listed in the Gemfile. Ruby gems are self-contained packages of code, more generally called libraries, that add functionality or features to your application.\
+If you want to add a new gem to your application, add "
+\b gem
+\b0  
+\i gem_name
+\i0 " to your Gemfile, optionally specifying a version number. Save the file and then run 
+\i bundle install
+\i0  to install the gem.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat6 \clwWidth20720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Gemfile.lock\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 This file specifies the exact versions of all gems you use. Because some gems depend on other gems, Ruby will install all you need automatically. The file also contains specific version numbers. It can be used to make sure that everyone within a team is working with the same versions of gems. The file is auto-generated. 
+\i Do not edit this file.
+\i0 \cell \lastrow\row
+\pard\pardeftab720\sa160
+
+\f0\b\fs44 \cf5 Important Rails commands\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 Here is a summary of important commands that can be used as you develop your Ruby on Rails app. You must be in the root directory of your project to run any of these commands (with the exception of the 
+\i rails new
+\i0  command). The project or application root directory is the folder containing all the subfolders described above (app, config, etc.).\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Create a new app\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 rails new name
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Create a new Ruby on Rails application with the given name here. This will give you the basic structure to immediately get started. After this command has successfully run your application is in a folder with the same name you gave the application. You have to 
+\i cd
+\i0  into that folder.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Start the server\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 rails server
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 You have to start the server in order for your application to respond to your requests. Starting the server might take some time. When it is done, you can access your application under {\field{\*\fldinst{HYPERLINK "localhost:3000"}}{\fldrslt \cf8 localhost:3000}} in the browser of your choice.\
+In order to stop the server, go to the console where it is running and press 
+\b Ctrl + C
+\b0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Scaffolding\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 rails generate scaffold name attribute:type
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf4 The scaffold command magically generates all the common things needed for a new resource for you! This includes 
+\i controllers, models and views
+\i0 . It also creates the following basic actions: create a new resource, edit a resource, show a resource, and delete a resource.\
+That's all the basics you need. Take this example:\
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf8 \cb9 rails generate scaffold product name:string price:integer
+\f1\fs30 \cf4 \cb1 \
+Now you can create new products, edit them, view them and delete them if you don't need them anymore. Nothing stops you from creating a full fledged web shop now ;-)\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Run migrations\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 rake db:migrate
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 When you add a new migration, for example by creating a new 
+\i scaffold
+\i0 , the migration has to be applied to your database. The command is used to update your database.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Install dependencies\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 bundle install
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 If you just added a new gem to your Gemfile you should run bundle install to install it. Don't forget to restart your server afterwards!\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth7380\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth13160\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Check dependencies\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf8 \cb9 bundle check
+\f1\fs30 \cf4 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Checks if the dependencies listed in Gemfile are satisfied by currently installed gems\cell \lastrow\row
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf5 \kerning1\expnd-4\expndtw-20
+Editor tips\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 \kerning1\expnd0\expndtw0 When you write code you will be using a text editor. Of course each text editor is different and configurable. Here are just some functions and their most general short cuts. All of them work in {\field{\*\fldinst{HYPERLINK "https://sublimetext.com/2"}}{\fldrslt \cf8 Sublime Text 2}}. Your editor may differ!\
+The shortcuts listed here are for Linux/Windows. On a Mac you will have to replace 
+\i Ctrl
+\i0  with 
+\i Cmd
+\i0 .\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Function\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Shortcut\cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf4 Save file\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + S
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Saves the currently open file. If it was a new file you may also be asked where to save it.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Undo\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + Z
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Undo the last change you made to the current file. Can be applied multiple times in succession to undo multiple changes.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Redo\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\b \cf4 Ctrl + Y
+\b0 \
+\pard\intbl\itap1\pardeftab720\sa200
+
+\i \cf4 or Ctrl + Shift + Z
+\i0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Redo what you just undid with 
+\i undo
+\i0 , can also be done multiple times.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Find in File\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + F
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Search for a character sequence within the currently open file. Hit 
+\i Enter
+\i0  to progress to the next match.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Find in all Files\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + Shift + F
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Search for a character sequence in all files of the project.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Replace\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\b \cf4 Ctrl + H
+\b0 \
+\pard\intbl\itap1\pardeftab720\sa200
+
+\i \cf4 or Ctrl + R
+\i0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Replace occurrences of the supplied character sequence with the other supplied character sequence. Useful when renaming something.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Copy\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + C
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Copy the currently highlighted text into the clipboard.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Cut\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + X
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Copy the highlighted text into the clipboard but delete it.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Paste\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + V
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Insert whatever currently is in the clipboard (through 
+\i Copy
+\i0  or 
+\i Cut
+\i0 ) at the current caret position. Can insert multiple times.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 New File\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + N
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Create a new empty file.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Search and open file\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + P
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Search for a file giving part of its name (
+\i fuzzy search
+\i0 ). Pressing 
+\i enter
+\i0  will open the selected file.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat6 \clwWidth2020\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clcbpat6 \clwWidth1700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx5760
+\clvertalt \clcbpat6 \clwWidth18720\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf4 Comment\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b \cf4 Ctrl + /
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf4 Marks the selected text as a comment, which means that it will be ignored. Useful when you want to see how something behaves or looks without a specific section of code being run.\cell \lastrow\row
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf5 \kerning1\expnd-4\expndtw-20
+Help: What to do when things go wrong?\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf4 \kerning1\expnd0\expndtw0 Things go wrong all the time. Don't worry, this happens to everyone. So keep calm. When you encounter an error, just google the error message. For best results, add the keywords "rails" or "ruby". Results from {\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/tagged/ruby-on-rails?sort=newest"}}{\fldrslt \cf8 stackoverflow.com}} are often really helpful. Look for those! The most experienced developers do this frequently ;-).\
+Here are common mistakes with a little checklist:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls4\ilvl0\cf4 {\listtext	\'95	}Have you run 
+\i rake db:migrate
+\i0  to apply the newest database migrations?\
+{\listtext	\'95	}Have you really saved the file you just changed? Unsaved files are often marked in the editor via an asterisk or a point next to their name.\
+{\listtext	\'95	}If you just added a gem to the Gemfile, have you run 
+\i bundle install
+\i0  to install it?\
+{\listtext	\'95	}If you just installed a gem, have you restarted the server?\
+\pard\pardeftab720\sa200
+\cf4 Do you need more beginner friendly in depth information about Ruby on Rails? We have started to gather free tutorials and learning material on a {\field{\*\fldinst{HYPERLINK "http://pragtob.github.io/rails-beginner-cheatsheet/resources.html"}}{\fldrslt 
+\b \cf8 resources}} page! Please give feedback about your favorite tutorials and lessons!\
+\pard\pardeftab720\sa200\qc
+\cf4 created by {\field{\*\fldinst{HYPERLINK "http://pragtob.wordpress.com/about/"}}{\fldrslt \cf8 Tobias Pfeiffer}}\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qc
+\ls5\ilvl0\cf8 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://pragtob.github.io/rails-beginner-cheatsheet/about.html"}}{\fldrslt About}}\cf4  \cf12 \'b7\cf4  {\field{\*\fldinst{HYPERLINK "http://pragtob.wordpress.com/"}}{\fldrslt \cf8 Blog}} \cf12 \'b7\cf4  {\field{\*\fldinst{HYPERLINK "http://pragtob.github.io/rails-beginner-cheatsheet/resources.html"}}{\fldrslt \cf8 Resources}}}

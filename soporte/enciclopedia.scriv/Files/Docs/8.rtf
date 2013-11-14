@@ -1,0 +1,250 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red55\green55\blue55;\red83\green83\blue83;\red247\green247\blue247;
+\red213\green213\blue213;\red237\green30\blue13;\red245\green245\blue247;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\deftab720
+\pard\pardeftab720\sa200
+
+\f0\b\fs84 \cf2 \kerning1\expnd-4\expndtw-20
+Console Basics\
+\pard\pardeftab720\sa200
+
+\f1\b0\fs30 \cf3 \kerning1\expnd0\expndtw0 The console (also called 
+\i command line, command prompt or terminal
+\i0 ) is just another way of interacting with your computer. So you can basically do anything with it that you could also do with your graphical desktop user interface. This sections contains a couple of examples.\
+For the different operating systems 
+\b starting the console
+\b0  differs.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\b \cf3 {\listtext	\'95	}Windows:
+\b0  Open the start menu and search for command prompt. Alternatively choose 
+\i execute
+\i0  and enter 
+\i cmd
+\i0 .\
+\ls1\ilvl0
+\b {\listtext	\'95	}Mac:
+\b0  Open Spotlight, type 
+\i terminal
+\i0 , and start that program.\
+\ls1\ilvl0
+\b {\listtext	\'95	}Linux:
+\b0  The terminal should be one of the main options once you open the main menu of your distribution. Otherwise search for 
+\i terminal
+\i0  if your distribution has such an option or look under Accessories.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat4 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat4 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat4 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat4 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b \cf3 Concept\cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Usage\cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Examples\cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Description\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf3 Change directory\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf6 \cb7 cd directory
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 cd my_app
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 cd my_app/app/controllers
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Changes the directory to the specified directory on the console.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat4 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat4 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat4 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat4 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 List contents directory\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 ls directory
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 Windows: dir directory
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 ls
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 ls my_app
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Shows all contents (files and folders) of the directory. If no directory is specified shows the contents of the current directory.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Directory you are currently in\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf6 \cb7 pwd
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf6 \cb7 pwd
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Shows the full path of the directory you are currently in. E.g. /home/tobi/railsgirls \
+A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat4 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat4 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat4 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat4 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Create a new directory\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf6 \cb7 mkdir name
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 mkdir rails
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 mkdir fun
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Creates a directory with the given name in the folder you are currently in.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Delete a file\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 rm file
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 Windows: del file
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 rm foo
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 rm index.html
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 rm pictures/old_picture.jpg
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf3 Deletes the specified file. Be 
+\b extra cautious
+\b0  with this as it would be too bad to delete something you still need :-(\
+You can simply specify the name of a file of the directory you are currently in. However you can also specify a path, this is shown in the third example. There we delete the 
+\i old_picture.jpg
+\i0  file from the 
+\i pictures
+\i0  folder.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat4 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat4 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat4 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat4 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Delete a directory\cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 rm -r folder
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 Windows: rd folder
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 rm -r stuff_i_dont_need
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 rm -r stuff_i_dont_need/
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 rm -r old_application
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+\cf3 Deletes the specified folder 
+\b and all of its contents
+\b0 . So please be 
+\b super cautious
+\b0  with this! Make sure that you do not need any of the contents of this folder any more.\
+So why would you want to delete a whole folder? Well maybe it was an old application that you do not need anymore :-)\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clshdrawnil \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clshdrawnil \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Starting a program\cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs26 \cf6 \cb7 program arguments
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\sa200
+
+\f2\fs26 \cf6 \cb7 firefox
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 firefox railsgirlsberlin.de
+\f1\fs30 \cf3 \cb1 \
+
+\f2\fs26 \cf6 \cb7 irb
+\f1\fs30 \cf3 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Starts the program with the given name and arbitrary arguments if the program takes arguments. Firefox is just one example. Starting Firefox without arguments just opens up Firefox. If you give it an argument it opens the specified URL. When you type in 
+\f2\fs26 \cf6 \cb7 irb
+\f1\fs30 \cf3 \cb1  this starts 
+\i interactive ruby
+\i0 .\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat4 \clwWidth1500\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx2160
+\clvertalt \clcbpat4 \clwWidth3700\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx4320
+\clvertalt \clcbpat4 \clwWidth4560\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx6480
+\clvertalt \clcbpat4 \clwWidth12360\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl160 \clpadb160 \clpadr160 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf3 Abort the program\cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 Press 
+\b Ctrl + C
+\b0 \cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 -\cell 
+\pard\intbl\itap1\pardeftab720
+\cf3 This will abort the program currently running in the terminal. For instance this is used to shut down the Rails server. You can also abort many other related tasks with it, including: bundle install, rake db:migrate, git pull and many more!\cell \lastrow\row
+}
