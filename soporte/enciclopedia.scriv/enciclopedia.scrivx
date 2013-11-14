@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScrivenerProject Version="1.0" Creator="SCRMAC-2.5-25236" Modified="2013-11-14 16:40:30 +0100">
+    <Binder>
+        <BinderItem ID="0" Type="DraftFolder" Created="2013-11-14 12:07:59 +0100" Modified="2013-11-14 12:07:59 +0100">
+            <Title>Borrador</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="3" Type="Text" Created="2013-11-14 12:07:59 +0100" Modified="2013-11-14 12:07:59 +0100">
+                    <Title>Sin título</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" Type="ResearchFolder" Created="2013-11-14 12:07:59 +0100" Modified="2013-11-14 12:07:59 +0100">
+            <Title>Investigar</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+        <BinderItem ID="2" Type="TrashFolder" Created="2013-11-14 12:07:59 +0100" Modified="2013-11-14 12:07:59 +0100">
+            <Title>Papelera</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+        <BinderItem ID="4" Type="Folder" Created="2013-11-14 12:08:13 +0100" Modified="2013-11-14 12:08:15 +0100">
+            <Title>Ruby</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+            <Children>
+                <BinderItem ID="5" Type="Folder" Created="2013-11-14 12:08:18 +0100" Modified="2013-11-14 12:08:20 +0100">
+                    <Title>Rails</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="6" Type="Text" Created="2013-11-14 12:08:32 +0100" Modified="2013-11-14 12:09:23 +0100">
+                    <Title>CheatSheet1</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1017,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="7" Type="Folder" Created="2013-11-14 12:09:39 +0100" Modified="2013-11-14 12:09:41 +0100">
+            <Title>Shell</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+            <Children>
+                <BinderItem ID="8" Type="Text" Created="2013-11-14 12:09:48 +0100" Modified="2013-11-14 12:10:01 +0100">
+                    <Title>basico1</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>3154,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="61FDC853-9C32-4E4D-B8F4-F2FD52D54F11" Color="0.784753 0.815752 0.848702">
+            <Title>Cuaderno</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="44199F01-6B19-4FCA-A5D8-CF475C052D11" Color="0.922 0.91 0.98">
+            <Title>Resultados de la búsqueda</Title>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>Etiqueta</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">Sin etiqueta</Label>
+            <Label ID="0" Color="0.9 0.92 0.95">Concepto</Label>
+            <Label ID="1" Color="0.985 0.875 0.85">Capítulo</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Estado</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">Sin estado</Status>
+            <Status ID="0">Cosas pendientes</Status>
+            <Status ID="1">Primer borrador</Status>
+            <Status ID="2">Borrador revisado</Status>
+            <Status ID="3">Borrador final</Status>
+            <Status ID="4">Hecho</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2013-11-14 12:07:57 +0100" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2013-11-14 12:07:57 +0100"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>
