@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <SearchIndexes Version="1.0">
     <Documents>
+        <Document ID="7">
+            <Title>Shell</Title>
+        </Document>
         <Document ID="3">
             <Title>Sin título</Title>
+        </Document>
+        <Document ID="13">
+            <Title>Ejemplo 1</Title>
+            <Text>Se va a definir un Iteratee que consume los dos primeros inputs en un Enumerator[Int]
+
+La función total2Chunks produce Iteratee[Int,Int] ¿cuál? Un iterador Cont[Int,Int] que debe definirse con una función Input[Int]=&gt;Iterate[Int,Int]
+
+El metodo run de Enumerator espera un iteratee
+
+La función que se debe usar para construir un Cont produce un nuevo Iteratee
+
+// `step` function is the consuming function receiving previous context (idx, total) and current chunk
+  // context : (idx, total) idx is the index to count loops
+// chunk is EOF or Empty =&gt; simply stops iteration by triggering state Done with current total
+ // found one chunk 
+// if first or 2nd chunk, call `step` again by incrementing idx and computing new total
+// if reached 2nd chunk, stop iterating
+// initiates iteration by initialize context and first state (Cont) and launching iteration
+
+
+
+
+def total2Chunks: Iteratee[Int, Int] = {
+  
+// esta función define dinamicamente la nueva función que contiene el Iteratee que produce
+
+  def step(idx: Int, total: Int)(i: Input[Int]): Iteratee[Int, Int] = i match {
+       case Input.EOF | Input.Empty =&gt; Done(total, Input.EOF)
+       case Input.El(e) =&gt;
+            if(idx &lt; 2) Cont[Int, Int](i =&gt; step(idx+1, total + e)(i))
+            else Done(total, Input.EOF)
+  }
+
+    (Cont[Int, Int](i =&gt; step(0, 0)(i)))
+}
+
+// Usando lo
+
+val promiseTotal = Enumerator(10, 20, 5) run total2Chunks
+promiseTotal.map(println _)
+=&gt; prints 30
+
+El iteratee de tipo Cond contiene una función. Al ejecutar dicha función se obtiene otro Iteratee, que eventualmente contiene su propia función. En estas funciones( la esencia de Cond) está presente el estado, el contexto.
+
+Entonces el estado de la iteración se codifica, no en una variable, sino en una función. Por ejemplo, el último iteratee tendra una función que al ejecutarse devolverá Done, lo que dentro del método run signifcará el fin de la ejecución
+
+</Text>
         </Document>
         <Document ID="8">
             <Title>basico1</Title>
@@ -63,6 +113,82 @@ Abort the program
 Press Ctrl + C
 -
 This will abort the program currently running in the terminal. For instance this is used to shut down the Rails server. You can also abort many other related tasks with it, including: bundle install, rake db:migrate, git pull and many more!
+</Text>
+        </Document>
+        <Document ID="4">
+            <Title>Ruby</Title>
+        </Document>
+        <Document ID="11">
+            <Title>Iteratees</Title>
+            <Text>Iteratees
+// un iteratee que consume chunks Strings y produce un Int 
+Iteratee[String,Int]
+
+El interface Iteratee Iteratee[E,A] tiene dos parámetros takes  E, que representa el tipo de la Entrada que acepta y   A el tipo del resultado que se calcula
+
+Los iteratee se crean independientes de cualquier fuente de datos. La fuente de datos es responsable de alimentar un iteratee con el primer chunk, el cuál produce otro iteratee que será alimentado con el siguiente chunk, y así sucesivamente
+
+Por ejemplo
+val enumerator = Enumerator(1, 234, 455, 987)
+enumerator.run(Iteratee.fold(0){ (total, elt) =&gt; total + elt }
+
+
+dentro del método run el  método fold del objeto (no confundir con el interface) Iteratee, al que se le pasa ( a fold) una función crea una instancia de iteratee que recibe los chunks del enumerator
+
+Enumerator
+
+Enumerator[E] produce datos de tipo E de uno de estos tipos:
+	•	Input[E] 
+	•	Input.Empty significa que el Enumerator está vacío
+	•	Input.EOF  significa que el enumerator ha alcanzado su fin
+
+Un Iteratee es un objeto general que se emplea para iterar por los datos producidos por un Enumerator. 
+
+Se crea de forma independiente al Enumerator sobre el cuál iterará. Al Enumerator se le proporcionará el Iteratee. El enumerator pone ( push) los datos en el Iteratee a diferencia del modelo de Iterador donde el iterador saca ( pull) los datos. La responsabilidad de proporcionar los datos recae en el Enumearator y no es responsabilidad del Iteratee el obtenerlos.
+
+El objeto Iteratee es inmutable: cuando recibe un chunk de datos se crea un nuevo Iteratee
+
+Una vez iniciada el Iteratee es el responsable del proceso de iteración y decide cuando pararlo
+
+Para que sea consumido/iterado al Enumerator se le debe enchufar un Iterator o, con mayor precisión, el primer chunk de datos se debe poner dentro del Iteratee
+
+
+El Iteratee consume un único chunk y, al hacerlo, realiza una computo. Recibe un contexto ( por ejemplo un valor acumulado) del paso anterior y computa el nuevo conexto con el trozo de datos corriente y propaga el contexto al siguiente paso ( si lo hay)
+
+El iteratee puede estar en tres estado Cont Done Error. Mientras está en Cont se produce la iteración hasta que se pasa a uno de los otrs estados
+
+
+El método abstracto del trait Iteratee
+
+abstract def fold[B](folder: (Step[E, A]) ⇒ Future[B]): Future[B]
+
+
+El Step, como trait, tiene un campo lazy val it: Iteratee[E, A]
+
+El objeto Step define los tres estados
+
+object Step {
+  case class Done[+A, E](a: A, remaining: Input[E]) extends Step[E, A]
+  case class Cont[E, +A](k: Input[E] =&gt; Iteratee[E, A]) extends Step[E, A]
+  case class Error[E](msg: String, input: Input[E]) extends Step[E, Nothing]
+}
+
+
+</Text>
+        </Document>
+        <Document ID="9">
+            <Title>Scala</Title>
+        </Document>
+        <Document ID="5">
+            <Title>Rails</Title>
+        </Document>
+        <Document ID="12">
+            <Title>Enlaces</Title>
+            <Text>Enlaces
+
+http://mandubian.com/2012/08/27/understanding-play2-iteratees-for-normal-humans/
+
+
 </Text>
         </Document>
         <Document ID="6">
@@ -486,14 +612,8 @@ Do you need more beginner friendly in depth information about Ruby on Rails? We 
 created by Tobias Pfeiffer
 	•	About · Blog · Resources</Text>
         </Document>
-        <Document ID="4">
-            <Title>Ruby</Title>
-        </Document>
-        <Document ID="7">
-            <Title>Shell</Title>
-        </Document>
-        <Document ID="5">
-            <Title>Rails</Title>
+        <Document ID="10">
+            <Title>Play</Title>
         </Document>
     </Documents>
 </SearchIndexes>

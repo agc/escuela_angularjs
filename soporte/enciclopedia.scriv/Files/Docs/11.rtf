@@ -1,0 +1,148 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-CondensedBold;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;\red115\green0\blue2;\red245\green245\blue245;
+\red82\green0\blue83;\red83\green85\blue2;\red38\green38\blue38;\red26\green26\blue26;\red83\green83\blue83;
+\red249\green249\blue249;\red189\green54\blue19;\red33\green118\blue199;\red198\green28\blue111;\red37\green146\blue134;
+\red67\green67\blue67;\red0\green0\blue117;}
+\deftab720
+\pard\pardeftab720\sa375
+
+\f0\b\fs76 \cf2 \kerning1\expnd-4\expndtw-20
+Iteratees\
+\pard\pardeftab720
+
+\f1\b0\fs28 \cf3 \cb4 \kerning1\expnd0\expndtw0 // un iteratee que consume chunks Strings y produce un Int \cf0 \
+\pard\pardeftab720
+\cf5 Iteratee\cf6 [\cf5 String\cf6 ,\cf5 Int\cf6 ]
+\fs30 \cf7 \
+\pard\pardeftab720\sa300
+
+\f2 \cf7 \cb1 \
+\pard\pardeftab720
+
+\f3\fs24 \cf8 El interface Iteratee
+\f2\fs30 \cf7  
+\f1 \cf9 \cb10 Iteratee[E,A]
+\f2 \cf7 \cb1  
+\f3\fs24 \cf8 tiene dos par\'e1metros takes  E, que representa el tipo de la Entrada que acepta y   A el tipo del resultado que se calcula\
+\
+Los iteratee se crean independientes de cualquier fuente de datos. La fuente de datos es responsable de alimentar un iteratee con el primer chunk, el cu\'e1l produce otro iteratee que ser\'e1 alimentado con el siguiente chunk, y as\'ed sucesivamente\
+\pard\pardeftab720\sa300
+
+\f2\fs30 \cf7 \
+Por ejemplo\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15100\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f3\fs24 \cf11 val\cf8  \cf12 enumerator\cf8  \cf11 =\cf8  \cf13 Enumerator
+\f4\b \cf8 (
+\f3\b0 \cf14 1
+\f4\b \cf8 ,
+\f3\b0  \cf14 234
+\f4\b \cf8 ,
+\f3\b0  \cf14 455
+\f4\b \cf8 ,
+\f3\b0  \cf14 987
+\f4\b \cf8 )
+\f3\b0 \
+\cf12 enumerator
+\f4\b \cf8 .
+\f3\b0 \cf12 run
+\f4\b \cf8 (
+\f3\b0 \cf13 Iteratee
+\f4\b \cf8 .
+\f3\b0 \cf12 fold
+\f4\b \cf8 (
+\f3\b0 \cf14 0
+\f4\b \cf8 )\{
+\f3\b0  
+\f4\b (
+\f3\b0 \cf12 total
+\f4\b \cf8 ,
+\f3\b0  \cf12 elt
+\f4\b \cf8 )
+\f3\b0  \cf11 =>\cf8  \cf12 total\cf8  
+\f4\b +
+\f3\b0  \cf12 elt\cf8  
+\f4\b \}
+\f3\b0 \
+\
+\pard\intbl\itap1\pardeftab720\sa180
+\cf8 \
+\pard\intbl\itap1\pardeftab720
+\cf8 dentro del m\'e9todo run el  m\'e9todo fold del objeto (no confundir con el interface) Iteratee, al que se le pasa ( a fold) una funci\'f3n crea una instancia de iteratee que recibe los chunks del enumerator\
+\
+\pard\intbl\itap1\pardeftab720\sa375
+
+\f0\b\fs76 \cf2 \kerning1\expnd-4\expndtw-20
+Enumerator
+\f3\b0\fs24 \cf8 \kerning1\expnd0\expndtw0 \
+\pard\intbl\itap1\pardeftab720
+\cf8 \
+\pard\intbl\itap1\pardeftab720
+
+\fs20 \cf15 Enumerator[E]
+\f2\fs26 \cf7  
+\f3\fs24 \cf8 produce datos de tipo E de uno de estos tipos:
+\f2\fs26 \cf7 \
+\pard\intbl\itap1\pardeftab720\sa180
+
+\f3\fs20 \cf15 	\'95	Input[E]
+\f2\fs26 \cf7  \
+\pard\intbl\itap1\pardeftab720
+
+\f3\fs20 \cf15 	\'95	Input.Empty
+\f2\fs26 \cf7  significa que el Enumerator est\'e1 vac\'edo
+\f3\fs24 \cf8 \
+
+\fs20 \cf15 	\'95	Input.EOF
+\f2\fs26 \cf7  
+\f3\fs24 \cf8  significa que el enumerator ha alcanzado su fin\
+\
+Un Iteratee es un objeto general que se emplea para iterar por los datos producidos por un Enumerator. \
+\
+Se crea de forma independiente al Enumerator sobre el cu\'e1l iterar\'e1. Al Enumerator se le proporcionar\'e1 el Iteratee. El enumerator pone ( push) los datos en el Iteratee a diferencia del modelo de Iterador donde el iterador saca ( pull) los datos. La responsabilidad de proporcionar los datos recae en el Enumearator y no es responsabilidad del Iteratee el obtenerlos.\
+\
+El objeto Iteratee es inmutable: cuando recibe un chunk de datos se crea un nuevo Iteratee\
+\
+Una vez iniciada el Iteratee es el responsable del proceso de iteraci\'f3n y decide cuando pararlo\
+\
+Para que sea consumido/iterado al Enumerator se le debe enchufar un Iterator o, con mayor precisi\'f3n, el primer chunk de datos se debe poner dentro del Iteratee\
+\
+\
+El Iteratee consume un \'fanico chunk y, al hacerlo, realiza una computo. Recibe un contexto ( por ejemplo un valor acumulado) del paso anterior y computa el nuevo conexto con el trozo de datos corriente y propaga el contexto al siguiente paso ( si lo hay)\
+\
+El iteratee puede estar en tres estado Cont Done Error. Mientras est\'e1 en Cont se produce la iteraci\'f3n hasta que se pasa a uno de los otrs estados\
+\
+\
+\pard\intbl\itap1\pardeftab720\sa180
+
+\f2\fs26 \cf7 El m\'e9todo abstracto del trait Iteratee\
+\
+\pard\intbl\itap1\pardeftab720
+
+\f3\fs24 \cf13 abstract\cf12  
+\f4\b def
+\f3\b0  fold[B](folder: ({\field{\*\fldinst{HYPERLINK "http://www.playframework.com/documentation/2.2.x/api/scala/play/api/libs/iteratee/Step.html"}}{\fldrslt \cf12 Step}}[E, A]) \uc0\u8658  Future[B]): Future[B]\
+\
+\
+\cf8 El Step, como trait, tiene un campo \cf12 lazy val it: {\field{\*\fldinst{HYPERLINK "http://www.playframework.com/documentation/2.2.x/api/scala/play/api/libs/iteratee/Iteratee.html"}}{\fldrslt \cf12 Iteratee}}[E, A]\
+\
+El objeto Step define los tres estados\
+\
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs28 \cf16 \cb4 object\cf0 \cb4  \cf5 Step\cf0  \cf6 \{\cf0 \
+  \cf16 \cb4 case\cf0 \cb4  \cf16 \cb4 class\cf0 \cb4  \cf5 Done\cf6 [+\cf0 A\cf6 ,\cf0  E\cf6 ](\cf0 a\cf6 :\cf0  A\cf6 ,\cf0  remaining\cf6 :\cf0  \cf5 Input\cf6 [\cf0 E\cf6 ])\cf0  \cf16 \cb4 extends\cf0 \cb4  \cf5 Step\cf6 [\cf0 E\cf6 ,\cf0  A\cf6 ]\cf0 \
+  \cf16 \cb4 case\cf0 \cb4  \cf16 \cb4 class\cf0 \cb4  \cf5 Cont\cf6 [\cf0 E\cf6 ,\cf0  \cf6 +\cf0 A\cf6 ](\cf0 k\cf6 :\cf0  \cf5 Input\cf6 [\cf0 E\cf6 ]\cf0  \cf6 =>\cf0  \cf5 Iteratee\cf6 [\cf0 E\cf6 ,\cf0  A\cf6 ])\cf0  \cf16 \cb4 extends\cf0 \cb4  \cf5 Step\cf6 [\cf0 E\cf6 ,\cf0  A\cf6 ]\cf0 \
+  \cf16 \cb4 case\cf0 \cb4  \cf16 \cb4 class\cf0 \cb4  \cf5 Error\cf6 [\cf0 E\cf6 ](\cf0 msg\cf6 :\cf0  \cf5 String\cf6 ,\cf0  input\cf6 :\cf0  \cf5 Input\cf6 [\cf0 E\cf6 ])\cf0  \cf16 \cb4 extends\cf0 \cb4  \cf5 Step\cf6 [\cf0 E\cf6 ,\cf0  \cf5 Nothing\cf6 ]\cf0 \
+\cf6 \}
+\fs30 \cf7 \
+\pard\intbl\itap1\pardeftab720
+
+\f3\fs24 \cf12 \cb1 \
+\cell \lastrow\row
+}

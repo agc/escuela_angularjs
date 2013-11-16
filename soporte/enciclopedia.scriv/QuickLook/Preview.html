@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 	body {background-color: #bac0c7}
-    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Cochin, Times, Courier, Arial, serif; font-size:14.0px;}
+    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Candara, Cochin, Times, Courier, Arial, serif; font-size:14.0px;}
     .page {border: 1px solid #727272; background: #fff}
     hr {
       border-top: 1px dashed #000;
@@ -75,6 +75,53 @@ For the different operating systems starting the console differs.<br/>
  • Windows: Open the start menu and search for command prompt. Alternatively choose execute and enter cmd.<br/>
  • Mac: Open Spotlight, type terminal...</p>
 </li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Scala</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Play</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Iteratees</strong><br/>Iteratees<br/>
+// un iteratee que consume chunks Strings y produce un Int <br/>
+Iteratee[String,Int]<br/>
+<br/>
+El interface Iteratee Iteratee[E,A] tiene dos parámetros takes  E, que representa el tipo de la Entrada que acepta y   A el tipo del resultado que se calcula<br/>
+<br/>
+Los iteratee se crean independientes de cualquier fuente de datos. La fuente de datos es responsable de alimentar un iteratee con el primer chunk, el cuál produce otro iteratee que será alimentado con el siguiente chunk, y así sucesivamente<br/>
+<br/>
+Por eje...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Enlaces</strong><br/>Enlaces<br/>
+<br/>
+http://mandubian.com/2012/08/27/understanding-play2-iteratees-for-normal-humans/<br/>
+<br/>
+</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Ejemplo 1</strong><br/>Se va a definir un Iteratee que consume los dos primeros inputs en un Enumerator[Int]<br/>
+<br/>
+La función total2Chunks produce Iteratee[Int,Int] ¿cuál? Un iterador Cont[Int,Int] que debe definirse con una función Input[Int]=>Iterate[Int,Int]<br/>
+<br/>
+El metodo run de Enumerator espera un iteratee<br/>
+<br/>
+La función que se debe usar para construir un Cont produce un nuevo Iteratee<br/>
+<br/>
+// `step` function is the consuming function receiving previous context (idx, total) and current chunk<br/>
+  // context : (idx, total) idx is t...</p>
+</li>
+</ul>
 </ul>
 </ul>
 

@@ -1,0 +1,175 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red135\green135\blue135;\red189\green54\blue19;
+\red33\green118\blue199;\red37\green146\blue134;\red198\green28\blue111;}
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf2 Se va a definir un Iteratee que consume los dos primeros inputs en un Enumerator[Int]\
+\
+La funci\'f3n total2Chunks produce Iteratee[Int,Int] \'bfcu\'e1l? Un iterador Cont[Int,Int] que debe definirse con una funci\'f3n Input[Int]=>Iterate[Int,Int]\
+\
+El metodo run de Enumerator espera un iteratee\
+\
+La funci\'f3n que se debe usar para construir un Cont produce un nuevo Iteratee\
+\
+\pard\pardeftab720
+
+\f1\i \cf3 // `step` function is the consuming function receiving previous context (idx, total) and current chunk
+\f0\i0 \cf2 \
+  
+\f1\i \cf3 // context : (idx, total) idx is the index to count loops\
+// chunk is EOF or Empty => simply stops iteration by triggering state Done with current total
+\f0\i0 \cf2 \
+ 
+\f1\i \cf3 // found one chunk \
+// if first or 2nd chunk, call `step` again by incrementing idx and computing new total\
+// if reached 2nd chunk, stop iterating
+\f0\i0 \cf2 \
+
+\f1\i \cf3 // initiates iteration by initialize context and first state (Cont) and launching iteration
+\f0\i0 \cf2 \
+\
+\
+
+\f1\i \cf3 \
+\pard\pardeftab720
+
+\f0\i0 \cf2 \
+\pard\pardeftab720
+\cf4 def\cf2  \cf5 total2Chunks\cf4 :\cf2  \cf6 Iteratee
+\f2\b \cf2 [
+\f0\b0 \cf6 Int\cf2 , \cf6 Int
+\f2\b \cf2 ]
+\f0\b0 \cf2  \cf4 =\cf2  
+\f2\b \cf2 \{
+\f0\b0 \cf2 \
+  \
+// esta funci\'f3n define dinamicamente la nueva funci\'f3n que contiene el Iteratee que produce\
+\
+  \cf4 def\cf2  \cf5 step
+\f2\b \cf2 (
+\f0\b0 \cf5 idx\cf4 :\cf2  \cf6 Int
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf5 total\cf4 :\cf2  \cf6 Int
+\f2\b \cf2 )(
+\f0\b0 \cf5 i\cf4 :\cf2  \cf6 Input
+\f2\b \cf2 [
+\f0\b0 \cf6 Int
+\f2\b \cf2 ])
+\f0\b0 \cf4 :\cf2  \cf6 Iteratee
+\f2\b \cf2 [
+\f0\b0 \cf6 Int\cf2 , \cf6 Int
+\f2\b \cf2 ]
+\f0\b0 \cf2  \cf4 =\cf2  \cf5 i\cf2  \cf4 match\cf2  
+\f2\b \cf2 \{
+\f0\b0 \cf2 \
+       \cf4 case\cf2  \cf7 Input
+\f2\b \cf2 .
+\f0\b0 \cf7 EOF\cf2  
+\f2\b \cf2 |
+\f0\b0 \cf2  \cf7 Input
+\f2\b \cf2 .
+\f0\b0 \cf7 Empty\cf2  \cf4 =>\cf2  \cf7 Done
+\f2\b \cf2 (
+\f0\b0 \cf5 total
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf7 Input
+\f2\b \cf2 .
+\f0\b0 \cf7 EOF
+\f2\b \cf2 )
+\f0\b0 \cf2 \
+       \cf4 case\cf2  \cf7 Input
+\f2\b \cf2 .
+\f0\b0 \cf7 El
+\f2\b \cf2 (
+\f0\b0 \cf5 e
+\f2\b \cf2 )
+\f0\b0 \cf2  \cf4 =>\cf2 \
+            \cf4 if
+\f2\b \cf2 (
+\f0\b0 \cf5 idx\cf2  
+\f2\b \cf2 <
+\f0\b0 \cf2  \cf6 2
+\f2\b \cf2 )
+\f0\b0 \cf2  \cf7 Cont
+\f2\b \cf2 [
+\f0\b0 \cf6 Int\cf2 , \cf6 Int
+\f2\b \cf2 ](
+\f0\b0 \cf5 i\cf2  \cf4 =>\cf2  \cf5 step
+\f2\b \cf2 (
+\f0\b0 \cf5 idx
+\f2\b \cf2 +
+\f0\b0 \cf6 1
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf5 total\cf2  
+\f2\b \cf2 +
+\f0\b0 \cf2  \cf5 e
+\f2\b \cf2 )(
+\f0\b0 \cf5 i
+\f2\b \cf2 ))
+\f0\b0 \cf2 \
+            \cf4 else\cf2  \cf7 Done
+\f2\b \cf2 (
+\f0\b0 \cf5 total
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf7 Input
+\f2\b \cf2 .
+\f0\b0 \cf7 EOF
+\f2\b \cf2 )
+\f0\b0 \cf2 \
+  
+\f2\b \cf2 \}
+\f0\b0 \cf2 \
+\
+    
+\f2\b \cf2 (
+\f0\b0 \cf7 Cont
+\f2\b \cf2 [
+\f0\b0 \cf6 Int\cf2 , \cf6 Int
+\f2\b \cf2 ](
+\f0\b0 \cf5 i\cf2  \cf4 =>\cf2  \cf5 step
+\f2\b \cf2 (
+\f0\b0 \cf6 0
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf6 0
+\f2\b \cf2 )(
+\f0\b0 \cf5 i
+\f2\b \cf2 )))
+\f0\b0 \cf2 \
+
+\f2\b \cf2 \}
+\f0\b0 \cf2 \
+\
+\pard\pardeftab720
+
+\f1\i \cf3 // Usando lo\
+\pard\pardeftab720
+
+\f0\i0 \cf2 \
+\pard\pardeftab720
+\cf4 val\cf2  \cf5 promiseTotal\cf2  \cf4 =\cf2  \cf7 Enumerator
+\f2\b \cf2 (
+\f0\b0 \cf6 10
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf6 20
+\f2\b \cf2 ,
+\f0\b0 \cf2  \cf6 5
+\f2\b \cf2 )
+\f0\b0 \cf2  \cf5 run\cf2  \cf5 total2Chunks\cf2 \
+\cf5 promiseTotal
+\f2\b \cf2 .
+\f0\b0 \cf5 map
+\f2\b \cf2 (
+\f0\b0 \cf5 println\cf2  \cf4 _
+\f2\b \cf2 )
+\f0\b0 \cf2 \
+\cf4 =>\cf2  \cf5 prints\cf2  \cf6 30\
+\
+\pard\pardeftab720
+\cf2 El iteratee de tipo Cond contiene una funci\'f3n. Al ejecutar dicha funci\'f3n se obtiene otro Iteratee, que eventualmente contiene su propia funci\'f3n. En estas funciones( la esencia de Cond) est\'e1 presente el estado, el contexto.\
+\
+Entonces el estado de la iteraci\'f3n se codifica, no en una variable, sino en una funci\'f3n. Por ejemplo, el \'faltimo iteratee tendra una funci\'f3n que al ejecutarse devolver\'e1 Done, lo que dentro del m\'e9todo run signifcar\'e1 el fin de la ejecuci\'f3n\
+\
+}
