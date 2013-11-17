@@ -1,0 +1,16 @@
+//var $table = $('.container table');
+
+   /*var productListUrl = $table.data('list');    // por si existen elementos en la tabla
+
+    var filaCodigoEan = function(index,eanCode) {
+            var row = $('<tr/>').append($('<td/>').text(eanCode));
+            return $table.append(row);
+
+    }
+    // cada elemento del array se pasa, junto con su indice a la funcion filaCodigoEan
+    var filasProductos= function(products) {
+
+          return $.each(products,filaCodigoEan);
+    }
+
+    return $.get(productListUrl, filasProductos);   */

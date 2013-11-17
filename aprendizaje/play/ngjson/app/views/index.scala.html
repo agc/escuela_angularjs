@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products</title>
+        <link rel='stylesheet' type='text/css'
+        href='@routes.Assets.at("stylesheets/bootstrap.css")'>
+        <link rel='stylesheet' type='text/css' href="@routes.Assets.at("stylesheets/main.css")">
+        <script src="@routes.Assets.at("javascripts/angular.min.js")"></script>
+        <script src="@routes.Assets.at("javascripts/app.js")"></script>
+        <script src="@routes.Assets.at("javascripts/services.js")"></script>
+        <script src="@routes.Assets.at("javascripts/controllers.js")"></script>
+    </head>
+    <body ng-app="productosNG">
+        <div class="screenshot">
+
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="@routes.Application.index()">Product catalog
+                        </a>
+                        <ul class="nav"></ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="container" ng-controller="ProductosCtrl">
+                <table  >
+                    <tr><td>Codigos</td></tr>
+                    <tr ng-repeat="codigo in codigosEan"><td>{{codigo}}</td><td>{{product.name}}</td><td>{{product.description}}</td></tr>
+                </table>
+
+                 <table  >
+                     <tr><td>Datos completos</td></tr>
+                     <tr ng-repeat="producto in productos"><td>{{producto.ean}}</td><td>{{producto.name}}</td><td>{{producto.description}}</td></tr>
+                 </table>
+            </div>
+        </div>
+    </body>
+</html>
