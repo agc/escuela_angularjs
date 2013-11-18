@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body ng-app="MyApp">
+    <label for="checkbox"><input id="checkbox" type="checkbox" ng-model="visible">Marca/Desmarca</label>
+    <div show="visible">
+      <p>Hola Mundo</p>
+      <div>
+	      <p>El atributo ng-model asigna a la variable visible el valor del input. Como es un checkbox
+	      el valor es cierto/Falso</p>
+	      
+	      <p>La directiva ejecuta una función que establece una propiedad watch para el atributo show. 
+		 Cuando cambia, y eso ocurre al ser un ng-model al Marcar/Desmarcar el checkbox, se invoca
+		 una función callback que establece la propiedad display del elemento, en función del valor
+		 de visible a none o vacio
+	 </p> 
+	      
+      </div>
+    </div>
+  </body>
+</html>

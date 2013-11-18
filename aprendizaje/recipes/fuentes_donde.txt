@@ -1,0 +1,9 @@
+https://github.com/fdietz/recipes-with-angular-js-examples
+
+las fuentes
+
+git clone https://github.com/fdietz/recipes-with-angular-js-examples.git
+
+Servidor  Node
+
+npm install http-server -g
