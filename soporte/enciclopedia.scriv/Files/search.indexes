@@ -1,122 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <SearchIndexes Version="1.0">
     <Documents>
-        <Document ID="7">
-            <Title>Shell</Title>
+        <Document ID="10">
+            <Title>Play</Title>
         </Document>
         <Document ID="3">
             <Title>Sin título</Title>
-        </Document>
-        <Document ID="13">
-            <Title>Ejemplo 1</Title>
-            <Text>Se va a definir un Iteratee que consume los dos primeros inputs en un Enumerator[Int]
-
-La función total2Chunks produce Iteratee[Int,Int] ¿cuál? Un iterador Cont[Int,Int] que debe definirse con una función Input[Int]=&gt;Iterate[Int,Int]
-
-El metodo run de Enumerator espera un iteratee
-
-La función que se debe usar para construir un Cont produce un nuevo Iteratee
-
-// `step` function is the consuming function receiving previous context (idx, total) and current chunk
-  // context : (idx, total) idx is the index to count loops
-// chunk is EOF or Empty =&gt; simply stops iteration by triggering state Done with current total
- // found one chunk 
-// if first or 2nd chunk, call `step` again by incrementing idx and computing new total
-// if reached 2nd chunk, stop iterating
-// initiates iteration by initialize context and first state (Cont) and launching iteration
-
-
-
-
-def total2Chunks: Iteratee[Int, Int] = {
-  
-// esta función define dinamicamente la nueva función que contiene el Iteratee que produce
-
-  def step(idx: Int, total: Int)(i: Input[Int]): Iteratee[Int, Int] = i match {
-       case Input.EOF | Input.Empty =&gt; Done(total, Input.EOF)
-       case Input.El(e) =&gt;
-            if(idx &lt; 2) Cont[Int, Int](i =&gt; step(idx+1, total + e)(i))
-            else Done(total, Input.EOF)
-  }
-
-    (Cont[Int, Int](i =&gt; step(0, 0)(i)))
-}
-
-// Usando lo
-
-val promiseTotal = Enumerator(10, 20, 5) run total2Chunks
-promiseTotal.map(println _)
-=&gt; prints 30
-
-El iteratee de tipo Cond contiene una función. Al ejecutar dicha función se obtiene otro Iteratee, que eventualmente contiene su propia función. En estas funciones( la esencia de Cond) está presente el estado, el contexto.
-
-Entonces el estado de la iteración se codifica, no en una variable, sino en una función. Por ejemplo, el último iteratee tendra una función que al ejecutarse devolverá Done, lo que dentro del método run signifcará el fin de la ejecución
-
-</Text>
-        </Document>
-        <Document ID="8">
-            <Title>basico1</Title>
-            <Text>Console Basics
-The console (also called command line, command prompt or terminal) is just another way of interacting with your computer. So you can basically do anything with it that you could also do with your graphical desktop user interface. This sections contains a couple of examples.
-For the different operating systems starting the console differs.
-	•	Windows: Open the start menu and search for command prompt. Alternatively choose execute and enter cmd.
-	•	Mac: Open Spotlight, type terminal, and start that program.
-	•	Linux: The terminal should be one of the main options once you open the main menu of your distribution. Otherwise search for terminal if your distribution has such an option or look under Accessories.
-Concept
-Usage
-Examples
-Description
-Change directory
-cd directory
-cd my_app
-cd my_app/app/controllers
-Changes the directory to the specified directory on the console.
-List contents directory
-ls directory
-Windows: dir directory
-ls
-ls my_app
-Shows all contents (files and folders) of the directory. If no directory is specified shows the contents of the current directory.
-Directory you are currently in
-pwd
-pwd
-Shows the full path of the directory you are currently in. E.g. /home/tobi/railsgirls 
-A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.
-Create a new directory
-mkdir name
-mkdir rails
-mkdir fun
-Creates a directory with the given name in the folder you are currently in.
-Delete a file
-rm file
-Windows: del file
-rm foo
-rm index.html
-rm pictures/old_picture.jpg
-Deletes the specified file. Be extra cautious with this as it would be too bad to delete something you still need :-(
-You can simply specify the name of a file of the directory you are currently in. However you can also specify a path, this is shown in the third example. There we delete the old_picture.jpg file from the pictures folder.
-Delete a directory
-rm -r folder
-Windows: rd folder
-rm -r stuff_i_dont_need
-rm -r stuff_i_dont_need/
-rm -r old_application
-Deletes the specified folder and all of its contents. So please be super cautious with this! Make sure that you do not need any of the contents of this folder any more.
-So why would you want to delete a whole folder? Well maybe it was an old application that you do not need anymore :-)
-Starting a program
-program arguments
-firefox
-firefox railsgirlsberlin.de
-irb
-Starts the program with the given name and arbitrary arguments if the program takes arguments. Firefox is just one example. Starting Firefox without arguments just opens up Firefox. If you give it an argument it opens the specified URL. When you type in irb this starts interactive ruby.
-Abort the program
-Press Ctrl + C
--
-This will abort the program currently running in the terminal. For instance this is used to shut down the Rails server. You can also abort many other related tasks with it, including: bundle install, rake db:migrate, git pull and many more!
-</Text>
-        </Document>
-        <Document ID="4">
-            <Title>Ruby</Title>
         </Document>
         <Document ID="11">
             <Title>Iteratees</Title>
@@ -176,8 +65,8 @@ object Step {
 
 </Text>
         </Document>
-        <Document ID="9">
-            <Title>Scala</Title>
+        <Document ID="4">
+            <Title>Ruby</Title>
         </Document>
         <Document ID="5">
             <Title>Rails</Title>
@@ -612,8 +501,151 @@ Do you need more beginner friendly in depth information about Ruby on Rails? We 
 created by Tobias Pfeiffer
 	•	About · Blog · Resources</Text>
         </Document>
-        <Document ID="10">
-            <Title>Play</Title>
+        <Document ID="13">
+            <Title>Ejemplo 1</Title>
+            <Text>Se va a definir un Iteratee que consume los dos primeros inputs en un Enumerator[Int]
+
+La función total2Chunks produce Iteratee[Int,Int] ¿cuál? Un iterador Cont[Int,Int] que debe definirse con una función Input[Int]=&gt;Iterate[Int,Int]
+
+El metodo run de Enumerator espera un iteratee
+
+La función que se debe usar para construir un Cont produce un nuevo Iteratee
+
+// `step` function is the consuming function receiving previous context (idx, total) and current chunk
+  // context : (idx, total) idx is the index to count loops
+// chunk is EOF or Empty =&gt; simply stops iteration by triggering state Done with current total
+ // found one chunk 
+// if first or 2nd chunk, call `step` again by incrementing idx and computing new total
+// if reached 2nd chunk, stop iterating
+// initiates iteration by initialize context and first state (Cont) and launching iteration
+
+
+
+
+def total2Chunks: Iteratee[Int, Int] = {
+  
+// esta función define dinamicamente la nueva función que contiene el Iteratee que produce
+
+  def step(idx: Int, total: Int)(i: Input[Int]): Iteratee[Int, Int] = i match {
+       case Input.EOF | Input.Empty =&gt; Done(total, Input.EOF)
+       case Input.El(e) =&gt;
+            if(idx &lt; 2) Cont[Int, Int](i =&gt; step(idx+1, total + e)(i))
+            else Done(total, Input.EOF)
+  }
+
+    (Cont[Int, Int](i =&gt; step(0, 0)(i)))
+}
+
+// Usando lo
+
+val promiseTotal = Enumerator(10, 20, 5) run total2Chunks
+promiseTotal.map(println _)
+=&gt; prints 30
+
+El iteratee de tipo Cond contiene una función. Al ejecutar dicha función se obtiene otro Iteratee, que eventualmente contiene su propia función. En estas funciones( la esencia de Cond) está presente el estado, el contexto.
+
+Entonces el estado de la iteración se codifica, no en una variable, sino en una función. Por ejemplo, el último iteratee tendra una función que al ejecutarse devolverá Done, lo que dentro del método run signifcará el fin de la ejecución
+
+</Text>
+        </Document>
+        <Document ID="7">
+            <Title>Shell</Title>
+        </Document>
+        <Document ID="8">
+            <Title>basico1</Title>
+            <Text>Console Basics
+The console (also called command line, command prompt or terminal) is just another way of interacting with your computer. So you can basically do anything with it that you could also do with your graphical desktop user interface. This sections contains a couple of examples.
+For the different operating systems starting the console differs.
+	•	Windows: Open the start menu and search for command prompt. Alternatively choose execute and enter cmd.
+	•	Mac: Open Spotlight, type terminal, and start that program.
+	•	Linux: The terminal should be one of the main options once you open the main menu of your distribution. Otherwise search for terminal if your distribution has such an option or look under Accessories.
+Concept
+Usage
+Examples
+Description
+Change directory
+cd directory
+cd my_app
+cd my_app/app/controllers
+Changes the directory to the specified directory on the console.
+List contents directory
+ls directory
+Windows: dir directory
+ls
+ls my_app
+Shows all contents (files and folders) of the directory. If no directory is specified shows the contents of the current directory.
+Directory you are currently in
+pwd
+pwd
+Shows the full path of the directory you are currently in. E.g. /home/tobi/railsgirls 
+A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.
+Create a new directory
+mkdir name
+mkdir rails
+mkdir fun
+Creates a directory with the given name in the folder you are currently in.
+Delete a file
+rm file
+Windows: del file
+rm foo
+rm index.html
+rm pictures/old_picture.jpg
+Deletes the specified file. Be extra cautious with this as it would be too bad to delete something you still need :-(
+You can simply specify the name of a file of the directory you are currently in. However you can also specify a path, this is shown in the third example. There we delete the old_picture.jpg file from the pictures folder.
+Delete a directory
+rm -r folder
+Windows: rd folder
+rm -r stuff_i_dont_need
+rm -r stuff_i_dont_need/
+rm -r old_application
+Deletes the specified folder and all of its contents. So please be super cautious with this! Make sure that you do not need any of the contents of this folder any more.
+So why would you want to delete a whole folder? Well maybe it was an old application that you do not need anymore :-)
+Starting a program
+program arguments
+firefox
+firefox railsgirlsberlin.de
+irb
+Starts the program with the given name and arbitrary arguments if the program takes arguments. Firefox is just one example. Starting Firefox without arguments just opens up Firefox. If you give it an argument it opens the specified URL. When you type in irb this starts interactive ruby.
+Abort the program
+Press Ctrl + C
+-
+This will abort the program currently running in the terminal. For instance this is used to shut down the Rails server. You can also abort many other related tasks with it, including: bundle install, rake db:migrate, git pull and many more!
+</Text>
+        </Document>
+        <Document ID="14">
+            <Title>Recetas 1</Title>
+            <Text>Rails 
+
+Operaciones habituales
+
+sss
+
+Crear modelo, migraciones
+
+bin/rails generate scaffold purchase name:string cost:float
+
+
+En db/migrate/[date]_create_purchases.rb crea la clase que creará las tablas
+
+class CreatePurchases &lt; ActiveRecord::Migration
+  def change
+    create_table :purchases do |t|
+      t.string :name
+      t.float :cost
+      t.timestamps
+    end
+end end
+
+la tabla se crea mediante
+
+bin/rake db:migrate
+
+
+dd
+</Text>
+        </Document>
+        <Document ID="9">
+            <Title>Scala</Title>
         </Document>
     </Documents>
 </SearchIndexes>

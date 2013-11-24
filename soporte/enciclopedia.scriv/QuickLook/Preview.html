@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 	body {background-color: #bac0c7}
-    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Candara, Cochin, Times, Courier, Arial, serif; font-size:14.0px;}
+    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Cochin, Times, Courier, Arial, serif; font-size:14.0px;}
     .page {border: 1px solid #727272; background: #fff}
     hr {
       border-top: 1px dashed #000;
@@ -51,6 +51,40 @@
 <li>
 <p class="binderItem"><strong>Rails</strong></p>
 </li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Recetas 1</strong><br/>Rails <br/>
+<br/>
+Operaciones habituales<br/>
+<br/>
+sss<br/>
+<br/>
+Crear modelo, migraciones<br/>
+<br/>
+bin/rails generate scaffold purchase name:string cost:float<br/>
+<br/>
+<br/>
+En db/migrate/[date]_create_purchases.rb crea la clase que creará las tablas<br/>
+<br/>
+class CreatePurchases < ActiveRecord::Migration<br/>
+  def change<br/>
+    create_table :purchases do |t|<br/>
+      t.string :name<br/>
+      t.float :cost<br/>
+      t.timestamps<br/>
+    end<br/>
+end end<br/>
+<br/>
+la tabla se crea mediante<br/>
+<br/>
+bin/rake db:migrate<br/>
+<br/>
+<br/>
+dd</p>
+</li>
+</ul>
+<hr/>
 <li>
 <p class="binderItem"><strong>CheatSheet1</strong><br/>Rails Beginner Cheat Sheet<br/>
   Resources<br/>
